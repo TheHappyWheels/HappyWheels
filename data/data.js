@@ -1,6 +1,6 @@
 export const websiteData = {
   name: "Happy Wheel",
-  description: "A simple website for a car rental company",
+  description: "car rental company website",
   keywords: "car, rental, company, website",
   // url: "https://happy-wheel.vercel.app",
   logo: "/images/logo-no-name.png",
@@ -8,6 +8,8 @@ export const websiteData = {
   facebookUsername: "happywheel",
   instagramUsername: "happywheel",
   baseColor: "cyan",
+  email: "example@happywheels.com",
+  phoneNumber: "123-456-7890",
 };
 
 export const navLinks = [];
@@ -18,6 +20,17 @@ export const footerLinks = [
   { id: 3, name: "Terms", url: "#" },
   { id: 4, name: "Privacy", url: "#" },
 ];
+
+export const heroOptions = {
+  title: "Drive with Joy, Rent with Happy Wheels!",
+  description:
+    "Happy Wheels: Steering you to joy. Experience effortless car rental with us, where every journey is a delight.",
+  mainButtonText: "Get started",
+  mainButtonUrl: "#",
+  secondaryButtonText: "Learn more",
+  secondaryButtonUrl: "#",
+  image: "/images/hero-bg.jpg",
+};
 
 export const transitionTypes = [
   {
@@ -55,6 +68,7 @@ export const cars = [
     brand: "Toyota",
     model: "Camry",
     year: 2023,
+    slug: "toyota-camry-2023-1",
     color: "Black",
     mileage: 15000, // in km
     fuelType: "Gasoline",
@@ -91,6 +105,7 @@ export const cars = [
     brand: "Honda",
     model: "Accord",
     year: 2022,
+    slug: "honda-accord-2022-2",
     color: "Blue",
     mileage: 18000,
     fuelType: "Gasoline",
@@ -104,7 +119,7 @@ export const cars = [
     pricePerMonth: 1300,
     bluetooth: true,
     available: true,
-    mainImage: "/images/honda_accord_main.jpeg",
+    mainImage: "/images/honda_accord_main.jpg",
     videos: [],
     images: [
       "/images/honda_accord_back.jpg",
@@ -127,6 +142,7 @@ export const cars = [
     brand: "Ford",
     model: "Mustang",
     year: 2023,
+    slug: "ford-mustang-2023-3",
     color: "Red",
     mileage: 12000,
     fuelType: "Premium Gasoline",
