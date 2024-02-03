@@ -32,6 +32,20 @@ export const heroOptions = {
   image: "/images/hero-bg.jpg",
 };
 
+export const contactOptions = {
+  facebookLink: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  enableFacebook: true,
+  twitterLink: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  enableTwitter: true,
+  instagramLink: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  enableInstagram: true,
+  pinterestLink: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  enablePhone: true,
+  phone: "XXXXXXXXXXXX",
+  enablePhone: true,
+  enableEmail: true,
+};
+
 export const transitionTypes = [
   {
     id: 1,

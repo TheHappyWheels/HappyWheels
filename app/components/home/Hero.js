@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 
@@ -69,7 +68,7 @@ export function Hero({ baseColor, heroOptions }) {
           {heroOptions.title}
         </h1>
         <p
-          className={`mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48`}
+          className={`mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 text-balance`}
         >
           {heroOptions.description}
         </p>
