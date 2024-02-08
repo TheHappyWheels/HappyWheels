@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 
-import { cars } from "@/data/data";
 import { Results } from "./hero/Results";
 
-export function Hero({ baseColor, heroOptions }) {
+export function Hero({ baseColor, settings, data }) {
   // const colorVariants = {
   //   red: "bg-red-700 hover:bg-red-800 focus:ring-red-300",
   //   orange: "bg-orange-700 hover:bg-orange-800 focus:ring-orange-300",
@@ -41,7 +40,7 @@ export function Hero({ baseColor, heroOptions }) {
 
   useEffect(() => {
     //creating a new array consists of each item's brand and model
-    const completeData = cars.map((item) => ({
+    const completeData = data.map((item) => ({
       text: item.brand + " " + item.model + " " + item.year,
       image: item.mainImage,
       slug: item.slug,
@@ -52,11 +51,11 @@ export function Hero({ baseColor, heroOptions }) {
         .map((item) => item);
       setResults(newResults);
     }
-  }, [searchTerm]);
+  }, [searchTerm, data]);
 
   return (
     <section
-      style={{ backgroundImage: `url(${heroOptions.image})` }}
+      style={{ backgroundImage: `url(${settings.image})` }}
       className={`bg-center bg-no-repeat bg-gray-500 bg-blend-multiply`}
     >
       <div
@@ -65,12 +64,12 @@ export function Hero({ baseColor, heroOptions }) {
         <h1
           className={`mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl`}
         >
-          {heroOptions.title}
+          {settings.title}
         </h1>
         <p
           className={`mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 text-balance`}
         >
-          {heroOptions.description}
+          {settings.description}
         </p>
         <div className="w-2/3 m-auto flex flex-col relative">
           <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />

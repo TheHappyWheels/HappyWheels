@@ -4,10 +4,8 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Card } from "./recentCars/Card";
 // Default theme
 import "@splidejs/react-splide/css";
-//data
-import { cars } from "@/data/data";
 
-export function RecentCars({ baseColor }) {
+export function RecentCars({ baseColor, data }) {
   let carouselOptions = {
     type: "loop",
     autoplay: true,
@@ -44,7 +42,7 @@ export function RecentCars({ baseColor }) {
         Our Latest Cars
       </h1>
       <Splide options={{ ...carouselOptions }} className="my-8">
-        {cars?.map((car, index) => (
+        {data?.map((car, index) => (
           <SplideSlide key={index}>
             <Card
               image={car.mainImage}

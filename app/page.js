@@ -1,18 +1,24 @@
 "use client";
 import { Hero } from "./components/home/Hero";
 
-import { websiteData, heroOptions } from "@/data/data";
+import { websiteData, heroOptions, contactOptions, cars } from "@/data/data";
 import { RecentCars } from "./components/home/RecentCars";
-// import { Contact } from "./components/home/Contact";
+import { Contact } from "./components/home/Contact";
 
 export default function Home() {
   return (
     <main>
-      <div className="">
-        <Hero baseColor={websiteData.baseColor} heroOptions={heroOptions} />
-        <RecentCars baseColor={websiteData.baseColor} />
-        {/* <Contact /> */}
-      </div>
+      <Hero
+        baseColor={websiteData.baseColor}
+        settings={heroOptions}
+        data={cars}
+      />
+      <RecentCars baseColor={websiteData.baseColor} data={cars} />
+      <Contact
+        baseColor={websiteData.baseColor}
+        settings={contactOptions}
+        email={websiteData.email}
+      />
     </main>
   );
 }

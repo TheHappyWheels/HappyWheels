@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export function Navbar({ websiteData }) {
+export function Navbar({ websiteData, font }) {
   const colorVariants = {
     red: "bg-red-700 hover:bg-red-800 focus:ring-red-300",
     orange: "bg-orange-700 hover:bg-orange-800 focus:ring-orange-300",
@@ -24,10 +24,10 @@ export function Navbar({ websiteData }) {
   };
   return (
     <nav
-      className={`bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200`}
+      className={`bg-white w-full z-20 top-0 start-0 border-b border-gray-200`}
     >
       <div
-        className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4`}
+        className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2`}
       >
         <Link
           href="/"
@@ -35,14 +35,12 @@ export function Navbar({ websiteData }) {
         >
           <Image
             src={websiteData?.logo}
-            className={`h-20 w-auto`}
+            className={`h-16 w-auto`}
             alt={`${websiteData.name} Logo`}
-            height={64}
-            width={64}
+            height={32}
+            width={32}
           />
-          <span
-            className={`self-center text-2xl font-semibold whitespace-nowrap`}
-          >
+          <span className={`self-center whitespace-nowrap ${font} text-3xl`}>
             {websiteData.name}
           </span>
         </Link>

@@ -42,7 +42,7 @@ export function Card({ image, name, link, baseColor }) {
         </Link>
         <Link
           href={link}
-          className={`inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none ${colorVariants[baseColor]}`}
+          className={`inline-flex justify-center items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none ${colorVariants[baseColor]}`}
         >
           Read more
           <FaArrowRight className="ml-2" />

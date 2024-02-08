@@ -1,12 +1,13 @@
 export const websiteData = {
-  name: "Happy Wheel",
+  name: "Happy Wheels",
   description: "car rental company website",
   keywords: "car, rental, company, website",
   // url: "https://happy-wheel.vercel.app",
-  logo: "/images/logo-no-name.png",
-  twitterUsername: "@happy_wheel",
-  facebookUsername: "happywheel",
-  instagramUsername: "happywheel",
+  logo: "/images/logo.svg",
+  favicon: "/images/favicon.svg",
+  twitterUsername: "@happy_wheels",
+  facebookUsername: "happywheels",
+  instagramUsername: "happywheels",
   baseColor: "cyan",
   email: "example@happywheels.com",
   phoneNumber: "123-456-7890",
@@ -40,7 +41,7 @@ export const contactOptions = {
   instagramLink: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   enableInstagram: true,
   pinterestLink: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  enablePhone: true,
+  enablePinterest: true,
   phone: "XXXXXXXXXXXX",
   enablePhone: true,
   enableEmail: true,
@@ -88,9 +89,10 @@ export const cars = [
     fuelType: "Gasoline",
     transmission: transitionTypes[0].name,
     engine: "2.5L I4",
-    MPG: "33", // milage per galon
+    mpg: "33", // milage per galon
     fuelTankSize: 55, // in liters
     driveTrain: driveTrainTypes[0].name,
+    showPrice: true,
     pricePerDay: 70, // in AED
     pricePerWeek: 400, // in AED
     pricePerMonth: 1500, // in AED
@@ -125,9 +127,10 @@ export const cars = [
     fuelType: "Gasoline",
     transmission: "Automatic",
     engine: "1.5L Turbocharged",
-    MPG: "30",
+    mpg: "30",
     fuelTankSize: 50,
     driveTrain: "Front-Wheel Drive",
+    showPrice: true,
     pricePerDay: 60,
     pricePerWeek: 350,
     pricePerMonth: 1300,
@@ -162,9 +165,10 @@ export const cars = [
     fuelType: "Premium Gasoline",
     transmission: "Automatic",
     engine: "5.0L V8",
-    MPG: "25",
+    mpg: "25",
     fuelTankSize: 60,
     driveTrain: "Rear-Wheel Drive",
+    showPrice: true,
     pricePerDay: 80,
     pricePerWeek: 450,
     pricePerMonth: 1700,
