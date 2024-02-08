@@ -16,7 +16,7 @@ export const websiteData = {
 export const navLinks = [];
 
 export const footerLinks = [
-  { id: 1, name: "About", url: "#" },
+  // { id: 1, name: "About", url: "#" },
   { id: 2, name: "Contact", url: "#" },
   { id: 3, name: "Terms", url: "#" },
   { id: 4, name: "Privacy", url: "#" },
