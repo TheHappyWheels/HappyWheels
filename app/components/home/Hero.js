@@ -28,6 +28,7 @@ export function Hero({ baseColor, settings, data }) {
   const [results, setResults] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchFocus, setIsSearchFocus] = useState(false);
+  const [isResultsFocus, setIsResultsFocus] = useState(false);
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -80,15 +81,19 @@ export function Hero({ baseColor, settings, data }) {
             type="text"
             placeholder="Search for your dream car..."
             className={`p-2 pl-11 text-gray-700 bg-gray-200 ${
-              isOpen && isSearchFocus ? "rounded-t-lg" : "rounded-lg delay-100"
+              isOpen && (isResultsFocus || isSearchFocus)
+                ? "rounded-t-lg"
+                : "rounded-lg delay-100"
             } outline-none transition-all`}
           />
           <div
             className={`absolute overflow-y-scroll scrollbar-hide top-full w-full bg-white rounded-b-lg shadow-lg ${
-              isOpen && isSearchFocus ? "max-h-60" : "max-h-0"
+              isOpen && (isResultsFocus || isSearchFocus)
+                ? "max-h-60"
+                : "max-h-0"
             } transition-all`}
           >
-            {isOpen && isSearchFocus && <Results results={results} />}
+            <Results results={results} setIsResultsFocus={setIsResultsFocus} />
           </div>
         </div>
       </div>

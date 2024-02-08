@@ -24,7 +24,7 @@ export default function Page({ params }) {
           <div className="w-full px-4 md:w-1/2">
             <div className="lg:pl-20">
               <div className="mb-6 ">
-                <h2 className="max-w-xl mt-6 mb-6 text-xl font-semibold leading-loose tracking-wide text-gray-700 md:text-2xl">
+                <h2 className="max-w-xl mt-6 mb-6 text-xl font-bold leading-loose tracking-wide text-gray-700 md:text-2xl">
                   {currentCar.brand +
                     " " +
                     currentCar.model +

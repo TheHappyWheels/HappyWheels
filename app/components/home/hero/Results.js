@@ -2,9 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export function Results({ results }) {
+export function Results({ results, setIsResultsFocus }) {
   return (
-    <div className={`divide-y divide-gray-200`}>
+    <div
+      className={`divide-y divide-gray-200 z-40`}
+      onFocus={() => setIsResultsFocus(true)}
+      onBlur={() => setIsResultsFocus(false)}
+    >
       {results.map((result, index) => (
         <Link
           href={`/cars/${result.slug}`}
