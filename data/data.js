@@ -26,10 +26,6 @@ export const heroOptions = {
   title: "Drive with Joy, Rent with Happy Wheels!",
   description:
     "Happy Wheels: Steering you to joy. Experience effortless car rental with us, where every journey is a delight.",
-  mainButtonText: "Get started",
-  mainButtonUrl: "#",
-  secondaryButtonText: "Learn more",
-  secondaryButtonUrl: "#",
   image: "/images/hero-bg.jpg",
 };
 
@@ -77,6 +73,14 @@ export const driveTrainTypes = [
   },
 ];
 
+export const carFeatures = [
+  { id: 1, name: "Air Conditioning", icon: "/images/wind.svg" },
+  { id: 2, name: "Bluetooth", icon: "/images/bluetooth.svg" },
+  { id: 3, name: "GPS", icon: "/images/gps.svg" },
+  { id: 4, name: "Power Steering", icon: "/images/powerSteering.svg" },
+  { id: 5, name: "Seat Cooling", icon: "/images/carSeat.svg" },
+];
+
 export const cars = [
   {
     id: 1,
@@ -108,13 +112,7 @@ export const cars = [
       "/images/toyota_camry_side.jpeg",
       "/images/toyota_camry_trunk.jpeg",
     ],
-    features: [
-      "Air Conditioning",
-      "Power Steering",
-      "ABS Brakes",
-      "Bluetooth",
-      "Backup Camera",
-    ],
+    features: [carFeatures[0], carFeatures[1], carFeatures[2]],
   },
   {
     id: 2,
@@ -145,14 +143,7 @@ export const cars = [
       "/images/honda_accord_trunk.jpeg",
       "/images/honda_accord_wheel.jpeg",
     ],
-    features: [
-      "Air Conditioning",
-      "Power Steering",
-      "ABS Brakes",
-      "Bluetooth",
-      "Lane Departure Warning",
-      "Apple CarPlay",
-    ],
+    features: [carFeatures[0], carFeatures[1], carFeatures[2], carFeatures[4]],
   },
   {
     id: 3,
@@ -184,13 +175,6 @@ export const cars = [
       "/images/ford_mustang_side.jpeg",
       "/images/ford_mustang_trunk.jpeg",
     ],
-    features: [
-      "Air Conditioning",
-      "Power Steering",
-      "ABS Brakes",
-      "Bluetooth",
-      "Leather Seats",
-      "Backup Camera",
-    ],
+    features: [carFeatures[0], carFeatures[1], carFeatures[2], carFeatures[3]],
   },
 ];

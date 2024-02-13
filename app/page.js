@@ -1,9 +1,9 @@
 "use client";
 import { Hero } from "./components/home/Hero";
-
-import { websiteData, heroOptions, contactOptions, cars } from "@/data/data";
 import { RecentCars } from "./components/home/RecentCars";
 import { Contact } from "./components/home/Contact";
+
+import { websiteData, heroOptions, contactOptions, cars } from "@/data/data";
 
 export default function Home() {
   return (
