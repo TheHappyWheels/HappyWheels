@@ -7,7 +7,7 @@ import { websiteData, heroOptions, contactOptions, cars } from "@/data/data";
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-dvh">
       <Hero
         baseColor={websiteData.baseColor}
         settings={heroOptions}

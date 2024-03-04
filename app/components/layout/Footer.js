@@ -9,15 +9,15 @@ export function Footer({ websiteData, footerLinks }) {
         <span className="text-sm text-gray-500 sm:text-center">
           © {year}{" "}
           <Link href="/" className="hover:underline">
-            {websiteData.name}™
+            {websiteData?.name}™
           </Link>
           . All Rights Reserved.
         </span>
         <ul className="flex flex-wrap items-center justify-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
-          {footerLinks.map((link) => (
-            <li key={link.id} className="hover:text-gray-700 transition">
-              <Link href={link.url} className="me-4 md:me-6">
-                {link.name}
+          {footerLinks.map((link, index) => (
+            <li key={index} className="hover:text-gray-700 transition">
+              <Link href={link.link} className="me-4 md:me-6">
+                {link.title}
               </Link>
             </li>
           ))}

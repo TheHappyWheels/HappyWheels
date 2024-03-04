@@ -1,3 +1,4 @@
+import { urlFor } from "@/lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -34,27 +35,30 @@ export function Navbar({ websiteData, font }) {
           className={`flex items-center space-x-3 rtl:space-x-reverse`}
         >
           <Image
-            src={websiteData?.logo}
+            src={websiteData?.logoUrl}
             className={`h-16 w-auto`}
-            alt={`${websiteData.name} Logo`}
+            alt={`${websiteData?.name} Logo`}
             height={32}
             width={32}
           />
-          <span className={`self-center whitespace-nowrap ${font} text-3xl`}>
-            {websiteData.name}
+          <span
+            className={`self-center whitespace-nowrap ${font} text-xl sm:text-2xl md:text-3xl`}
+          >
+            {websiteData?.name}
           </span>
         </Link>
         <div
           className={`flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse`}
         >
-          <button
-            type="button"
+          <a
             className={`text-white ${
-              colorVariants[websiteData.baseColor]
-            } focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center`}
+              colorVariants[websiteData?.baseColor]
+            } focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-3 py-2 text-center`}
+            target="_blank"
+            href={`https://wa.me/+971547516354`}
           >
-            Get started
-          </button>
+            Contact Us
+          </a>
         </div>
       </div>
     </nav>

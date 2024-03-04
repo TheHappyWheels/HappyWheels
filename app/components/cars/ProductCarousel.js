@@ -43,12 +43,12 @@ export function ProductCarousel({ car }) {
   return (
     <div className="w-full px-4 mb-8 md:w-1/2 md:mb-0">
       <div className="sticky top-0 overflow-hidden ">
-        <div className="relative mb-6 lg:mb-10 lg:h-96">
+        <div className="relative h-72 mb-6 sm:h-80 sm:mb-9 md:mt-8 md:mb-0 lg:mb-20 lg:mt-2">
           <Splide options={{ ...mainCarouselOptions }} ref={mainSlider}>
             {allCarImages.map((image, index) => (
               <SplideSlide key={index}>
                 <Image
-                  className="object-contain w-full lg:h-full"
+                  className="aspect-[16/11] object-cover object-center w-full"
                   src={image}
                   alt=""
                   width={500}
@@ -76,7 +76,7 @@ export function ProductCarousel({ car }) {
                 alt=""
                 width={300}
                 height={300}
-                className="h-full w-auto"
+                className="w-full max-h-16 object-cover object-center"
               />
             </SplideSlide>
           ))}

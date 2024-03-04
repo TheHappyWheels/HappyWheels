@@ -1,13 +1,14 @@
 import React from "react";
 import { FaGasPump, FaTachometerAlt } from "react-icons/fa";
 import { PiEngineDuotone, PiGasCanFill } from "react-icons/pi";
+import { IoIosColorPalette } from "react-icons/io";
 
 export function CarSpecs({ specs }) {
   let specsArray = [
     {
-      icon: <FaTachometerAlt className="text-2xl" />,
-      title: "Milage",
-      value: specs.mileage,
+      icon: <IoIosColorPalette className="text-2xl" />,
+      title: "Color",
+      value: specs.color,
     },
     {
       icon: <FaGasPump className="text-2xl" />,
